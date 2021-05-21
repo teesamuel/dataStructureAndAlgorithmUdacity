@@ -1,0 +1,4 @@
+The space complexity  for this implementation is O(n)
+This implemenattion uses a recursive approach and returning the files if they exist.
+The time complexity is O (n^2) where n refers to the directories
+

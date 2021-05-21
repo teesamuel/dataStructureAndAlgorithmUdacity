@@ -1,0 +1,6 @@
+In this implementation, a set (seen) was used to keep track of the seen element to 
+avoid repetition in the union and intersection
+
+the time complexity for this is O(n) where n is the linked lists with the largest size 
+passed into the union/intersect functions in the worst case scenario
+The space complexity is O(n)

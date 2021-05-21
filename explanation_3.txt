@@ -1,0 +1,8 @@
+The big elephant in the Building. It actually require some extra work.
+Run time is O(nlogn) based on the size of the string
+The space complexity is O(n)
+
+The heapq module was used for the heap,
+A node was built  to hold character, frequency,left child, right child and the bit
+In the heap class, the heap was used to hold heaps, tree was used to hold binary tree and a dictionary huffman_code was used to store
+input and their respective code  

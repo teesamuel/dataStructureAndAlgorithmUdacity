@@ -1,0 +1,10 @@
+LRUCACHE Was instructed to run at O(1).
+A (self.cache) dictionary was used to implement cache and a queue (using list) 
+was also used to keep track of the cache.
+The (self.cache) dictionary and queu has a time complexity of O(1) 
+The space complexity of this implementation is 0(1)
+
+The get method retrieves from the dictionary if element is in the dictionary
+The set method stores in the cache is the cache is empty or the number of element is less than the capacity.
+Oldest item are deleted  based on the key value in the queue to accomodate new element when the cache is full
+

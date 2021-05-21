@@ -1,0 +1,5 @@
+
+The block chain implementation makes use of a Linklist  
+The time complexity would be  O(number of nodes attached to the linkelist ) i.e O(n)  
+space complexity is O(n)
+

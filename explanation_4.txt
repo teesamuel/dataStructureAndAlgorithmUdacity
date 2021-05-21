@@ -1,0 +1,3 @@
+The implementation makes use of a recursive method to check if the user exist in groups and returns if found
+The space complexity on this implementation is O(n)
+In worse case scenario, the time complexity is O(n*2)
