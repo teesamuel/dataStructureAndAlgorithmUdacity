@@ -30,6 +30,14 @@ class Huffman:
         self.huffman_code={}
 
     def calculate_frequency(self,data):
+        '''
+        This function loops through a list of strings to return a frequency table.
+
+        INPUTS: 
+        * data string
+        OUTPUTS:
+            * a dictionary show the frequery of occurence of Alphaphet Key(Alphabet):Value(frequency)  \
+        '''
         table={}
         for el in data:
             if el in table:
@@ -73,7 +81,6 @@ class Huffman:
     def calculate_huffman_code(self, root_node,current_code):
          if root_node==None:
              return
-         
          if root_node.character !=None:
              self.huffman_code[root_node.character]=current_code
              return
@@ -161,6 +168,9 @@ print(" Decoded DATA 1 ",decoded_data)
 
 sentence_2= 'This project is tough although I was happy I could solved it'
 sentence_3= 'I need to play FIFA 21 !!!!!'
+sentence_4= 'a'
+sentence_5= ''
+sentence_6= 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 
 encoded_data_2, tree2 = huffman_encoding(a_great_sentence)
 
@@ -171,10 +181,10 @@ print ("The content of the data is: {}\n".format(sentence_2))
 print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data_2, base=2))))
 print ("The content of the encoded data is: {}\n".format(encoded_data_2))
 
-decoded_data_2 = decode_string(encoded_data_2, tree)
+decoded_data_2 = decode_string(encoded_data_2, tree2)
 print(" Decoded DATA 2 ",decoded_data_2)
 
-encoded_data_3, tree = huffman_encoding(sentence_2)
+encoded_data_3, tree3 = huffman_encoding(sentence_3)
 
 print ("The size of the data is: {}\n".format(sys.getsizeof(sentence_3)))
 print ("The content of the data is: {}\n".format(sentence_3))
@@ -183,9 +193,43 @@ print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_
 print ("The content of the encoded data is: {}\n".format(encoded_data_3))
 
 
-decoded_data_3 = decode_string(encoded_data_3, tree)
-print(" Decoded DATA 1 ",decoded_data_3)
+decoded_data_3 = decode_string(encoded_data_3, tree3)
+print(" Decoded DATA 3 ",decoded_data_3)
 
 
+encoded_data_4, tree4 = huffman_encoding(sentence_4)
+
+print ("The size of the data is: {}\n".format(sys.getsizeof(sentence_4)))
+print ("The content of the data is: {}\n".format(sentence_4))
+
+print(encoded_data_4)
+# print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data_4, base=2))))
+print ("The content of the encoded data is: {}\n".format(encoded_data_4))
+
+decoded_data_4 = decode_string(encoded_data_4, tree4)
+print(" Decoded DATA 4 ",decoded_data_4)
+
+encoded_data_5, tree5 = huffman_encoding(sentence_5)
+
+print ("The size of the data is: {}\n".format(sys.getsizeof(sentence_5)))
+print ("The content of the data is: {}\n".format(sentence_5))
+
+# print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data_5, base=2))))
+print ("The content of the encoded data is: {}\n".format(encoded_data_5))
 
 
+decoded_data_5 = decode_string(encoded_data_5, tree5)
+print(" Decoded DATA 5 ",decoded_data_5)
+
+
+encoded_data_6, tree6 = huffman_encoding(sentence_6)
+
+print ("The size of the data is: {}\n".format(sys.getsizeof(sentence_6)))
+print ("The content of the data is: {}\n".format(sentence_6))
+
+# print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data_6, base=2))))
+print ("The content of the encoded data is: {}\n".format(encoded_data_6))
+
+
+decoded_data_6 = decode_string(encoded_data_6, tree6)
+print(" Decoded DATA 6 ",decoded_data_6)

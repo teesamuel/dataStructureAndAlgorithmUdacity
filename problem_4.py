@@ -50,6 +50,13 @@ test_user = 'test_user'
 family = Group("Family")
 samuel_user = 'samuel_user'
 
+empty = Group("Empty")
+empty_user = ''
+
+
+none_group = Group("None")
+none_user = None
+
 
 child.add_group(sub_child)
 parent.add_group(child)
@@ -60,3 +67,5 @@ print(is_user_in_group(samuel_user, family))
 print(is_user_in_group(test_user, test))
 print(is_user_in_group(test_user, parent))
 print(is_user_in_group(sub_child_user, test))
+print(is_user_in_group(empty_user, empty))
+print(is_user_in_group(none_user, none_group))

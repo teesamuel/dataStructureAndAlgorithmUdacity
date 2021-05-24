@@ -1,3 +1,4 @@
+
 class LRU_Cache(object):
 
     def __init__(self, capacity):
@@ -13,6 +14,16 @@ class LRU_Cache(object):
         # Retrieve item from provided key. Return -1 if nonexistent. 
 
     def set(self, key, value):
+        """
+            This function recursively look for the extension of the files in a particular directory and returns the list of all the files with a particular extension.
+
+            INPUTS: 
+            * extension 
+            * filepath
+
+        OUTPUTS:
+        * list of all the filepath with the input extension\
+        """
         if len(self.cache)==0:
             self.cache[key]=value
             self.queue.append(key)
@@ -34,6 +45,10 @@ our_cache.set(1, 1)
 our_cache.set(2, 2)
 our_cache.set(3, 3)
 our_cache.set(4, 4)
+our_cache.set(5, 5) 
+our_cache.set(6, 6)
+
+print(our_cache.get(3))      #3
 
 our_cache2.set(1, 1)
 our_cache2.set(2, 2)
