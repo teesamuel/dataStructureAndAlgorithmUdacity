@@ -15,15 +15,18 @@ class LRU_Cache(object):
 
     def set(self, key, value):
         """
-            This function recursively look for the extension of the files in a particular directory and returns the list of all the files with a particular extension.
-
+            This function stores key value in the cache memory with respect to the defined capacity.
+            It deletes the oldest element if the maximum capacity has been reached
+ 
             INPUTS: 
-            * extension 
-            * filepath
+            * key 
+            * value
 
         OUTPUTS:
-        * list of all the filepath with the input extension\
+        * 
         """
+        if (self.capacity <1):
+            return  
         if len(self.cache)==0:
             self.cache[key]=value
             self.queue.append(key)
@@ -35,6 +38,21 @@ class LRU_Cache(object):
             del self.cache[to_delete]
             self.cache[key]=value
 
+
+edge_cache = LRU_Cache(-1)
+
+edge_cache.set(1, 1) 
+edge_cache.set(2, 2) 
+
+print(edge_cache.get(2)) # -1
+print(edge_cache.get(3)) # -1
+
+edge_cache2 = LRU_Cache(0)
+edge_cache2.set(1, 1) # -1
+edge_cache2.set(2, 2) # -1
+
+print(edge_cache2.get(2)) # -1
+print(edge_cache2.get(3)) # -1
 
 our_cache = LRU_Cache(5)
 our_cache2 = LRU_Cache(4)
@@ -85,8 +103,3 @@ print(our_cache3.get(9))      # returns -1 because 9 is not present in the cache
 print(our_cache4.get(1))       # returns -1
 print(our_cache4.get(2))       # returns 2
 print(our_cache4.get(9))      # returns -1 because 9 is not present in the cache
-
-our_cache.set(5, 5) 
-our_cache.set(6, 6)
-
-print(our_cache.get(3))      #3

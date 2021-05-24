@@ -41,11 +41,13 @@ class LinkedList:
 
 def union( llist_1, llist_2):
         
-        if llist_1.size()==0:
+        if llist_1.size()==0 and llist_1.size()==0:
+            return -1 
+        elif llist_1.size()==0:
             return llist_2
         elif linked_list_2.size()==0:
             return llist_1
-
+        
         joint_list=LinkedList()
         llist_1=llist_1.head
         seen=set()
@@ -151,3 +153,50 @@ print ("TEST CASE 3 UNION")
 print (union(linked_list_5,linked_list_6))
 print ("TEST CASE 3 INTERSECTION")
 print (intersection(linked_list_6,linked_list_6))
+
+
+linked_list_7 = LinkedList()
+linked_list_8 = LinkedList()
+
+element_1 = []
+element_2 = [1,7,8,9,11,21,1,3,3]
+
+for i in element_1:
+    linked_list_7.append(i)
+
+for i in element_2:
+    linked_list_8.append(i)
+
+print ("TEST CASE 4 UNION")
+print (union(linked_list_7,linked_list_8))
+
+
+print ("TEST CASE 4 INTERSECTION")
+print (intersection(linked_list_7,linked_list_8))
+
+linked_list_9 = LinkedList()
+linked_list_10 = LinkedList()
+
+print ("TEST CASE 5 INTERSECTION")
+print (intersection(linked_list_9,linked_list_10))
+
+print("TEST CASE 5 UNION")
+print(union(linked_list_9,linked_list_10))
+
+
+linked_list_5 = LinkedList()
+linked_list_6 = LinkedList()
+
+element_1 = [3,2,4,35,6,65,6,4,3,23]
+element_2 = []
+
+for i in element_1:
+    linked_list_5.append(i)
+
+for i in element_2:
+    linked_list_6.append(i)
+
+print ("TEST CASE 6 UNION")
+print (union(linked_list_5,linked_list_6))
+print ("TEST CASE 6 INTERSECTION")
+print (intersection(linked_list_6,linked_list_5))
